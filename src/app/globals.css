@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --cream: #F5EDD6;
+  --obsidian: #0D0D0D;
+  --charcoal: #1A1A1A;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background: #C9A84C33;
+    color: #E8C97A;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0D0D0D;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #C9A84C55;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C9A84C;
+  }
+}
+
+@layer components {
+  .gold-divider {
+    @apply w-16 h-px bg-gold mx-auto my-6;
+  }
+
+  .section-eyebrow {
+    @apply text-gold font-body text-xs tracking-[0.35em] uppercase;
+  }
+
+  .section-title {
+    @apply font-display text-4xl md:text-5xl text-cream leading-tight;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-8 py-4 bg-gold text-obsidian
+           font-body font-bold text-sm tracking-widest uppercase
+           transition-all duration-300 hover:bg-gold-light
+           focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-8 py-4 border border-gold text-gold
+           font-body font-bold text-sm tracking-widest uppercase
+           transition-all duration-300 hover:bg-gold hover:text-obsidian
+           focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold;
+  }
+
+  .input-field {
+    @apply w-full bg-charcoal border border-white/10 text-cream placeholder-smoke
+           px-4 py-3 text-sm font-body
+           focus:outline-none focus:border-gold transition-colors duration-200;
+  }
+
+  .card-dish {
+    @apply bg-charcoal border border-white/5 overflow-hidden
+           transition-all duration-300 hover:border-gold/30;
+  }
+
+  .nav-link {
+    @apply text-smoke hover:text-cream text-xs tracking-[0.2em] uppercase
+           transition-colors duration-200 font-body;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, #C9A84C, #E8C97A, #8B6914);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .shimmer-gold {
+    background: linear-gradient(90deg, #C9A84C 0%, #E8C97A 50%, #C9A84C 100%);
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite;
+  }
+}
