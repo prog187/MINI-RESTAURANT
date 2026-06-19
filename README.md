@@ -32,7 +32,7 @@ Suivre `strapi-setup/README.md` pour :
 ### 5. Lancer Next.js
 ```bash
 npm run dev
-# http://localhost:3000
+# http://localhost:3000 et http://localhost:3000/admin/login pour gerer les reservations
 ```
 
 ## Intégration Strapi
