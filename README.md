@@ -35,7 +35,7 @@ npm run dev
 # http://localhost:3000
 ```
 
-## 🔌 Intégration Strapi
+## Intégration Strapi
 
 Le fichier `src/lib/strapi.ts` contient toutes les fonctions d'appel API.
  Etant a des fin de test et pour aller vite on a utilise des mocks a certains endroits sauf pour les recuperer les menu qui font des vraies appel API
